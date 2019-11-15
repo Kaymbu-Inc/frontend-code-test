@@ -1,6 +1,6 @@
 
 ## Challenge
-Build a "TagPicker" React component that displays a list of tags and folders, and allows the user to drill into infinite levels of folders and be able to select individual tags at any level.  The TagPicker can be one component or a set of components.  Any UI framework (e.g., Bootstrap) can be used, but the component(s) must be React components.  Use any React starter repo/kit that you like.  The delivered project should be a React app that renders the TagPicker and manages the properties going into the TagPicker (i.e., you will want to have a parent component that renders the TagPicker).  
+Build a "TagPicker" React component that displays a list of tags and folders, and allows the user to drill into infinite levels of folders and be able to select individual tags at any level. The TagPicker can be one component or a set of components. Any UI framework (e.g., Bootstrap) can be used (or none/your own), but the component(s) must be React components. Be sure to include some unit (and/or integration) tests to ensure everything works as expected. The delivered project should be a React app that renders the TagPicker and manages the properties going into the TagPicker (i.e., you will want to have a parent component that renders the TagPicker).  
 
 This is a mockup of what the tag picker will look like: 
 
