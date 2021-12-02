@@ -1,8 +1,13 @@
+# Tag Picker Challenge
 
-## Challenge
-Build a "TagPicker" React component that displays a list of tags and folders, and allows the user to drill into infinite levels of folders and be able to select individual tags at any level. The TagPicker can be one component or a set of components. Any UI framework (e.g., Bootstrap) can be used (or none/your own), but the component(s) must be React components. Be sure to include some unit (and/or integration) tests to ensure everything works as expected. The delivered project should be a React app that renders the TagPicker and manages the properties going into the TagPicker (i.e., you will want to have a parent component that renders the TagPicker).  
+Build a "TagPicker" React component that:
 
-This is a mockup of what the tag picker will look like: 
+* Displays a list of tags and folders
+* Allows the user to drill into infinite levels of folders and be able to select individual tags at any level.
+
+The TagPicker can be one component or a set of components. You may use any UI framework (e.g., Bootstrap) or none/your own, but the component(s) must be React components. Please include unit (and/or integration) tests to ensure everything works as expected. The delivered project should be a React app that renders the TagPicker and manages the properties going into the TagPicker (i.e., you will want to have a parent component that renders the TagPicker).  
+
+This is an example of what the tag picker will look like: 
 
 ![alt text](https://cl.ly/3d3o1A0f1B0K/Image%202018-04-11%20at%204.46.20%20PM.png "Mockup")
 
@@ -12,16 +17,14 @@ This is a mockup of what the tag picker will look like:
 - The user should be able to navigate into any folder (with possibly infinite depths)
 - The user should be able to return to the previous folder, all the way up to the 'Root Level'
 - When a tag is clicked, it should be selected (via checkbox)
-- When a folder is clicked, it should be navigated into
-- Display what tags are currently selected (via checkbox)
-- Tag selection should persist as folders are navigated in and out of
+- When a folder is clicked, it should be "opened" and display the folder's contents
+- Tag selection should persist as user navigates in and out of folders
 - Always display folders above tags.
 - Always display folders and tags sorted alphanumeric by name.
 - Only display 'back' button if you are not at the 'Root Level'
-- `onTagSelectionChange()` prop should be called each time a tag is selected/deselected, with the most up-to-date list of selected tagIds as the single argument
-
 
 ### TagPicker Props
+
 The component should receive and handle the following props:
 
 
@@ -33,6 +36,7 @@ The component should receive and handle the following props:
 
 
 ### Tag List
+
 Tags and Folders at all levels/depth live side-by-side within the same list.
 Items with `parent: null` are considered 'Root Level' items, and should be displayed initially. As the user drills into deeper folders, you can use the `parent` property (eg `parent: '...'`) to identify what tags and folders should be displayed at the current level/depth.  The `ancestors` property refers to the folders that are above the tag; the ancestor list also includes the direct parent of the tag.  
 
@@ -45,9 +49,7 @@ Each item in this list contains the folowing props:
 | isFolder  | Boolean | If true, means Tag is a Folder of Tags.                                                                         |
 | parent    | String  | If null, means Tag or Folder is at 'Root Level'. If present, identifies the id of the direct parent of the tag or folder. |
 | ancestors | Array   | List of direct ancestors (including Parent)                                                                     |
-  
-  
 
 ### Deliverables
 
-Once completed, generate a ZIP archive of your project (excluding `node_modules/`) and send the packaged contents to `engineering@kaymbu.com` -- And our team will review and get back to you regarding next steps!
+Once completed, generate a ZIP archive of your project (excluding `node_modules/`) and send the packaged contents to `engineering@kaymbu.com`. Please exclude `node_modules` but include the Git history in the ZIP file. Our team will review and get back to you regarding next steps!
